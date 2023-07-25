@@ -12,7 +12,7 @@ export const Profile = ({
   likes }) => {
   return (
 <div className="profile">
-  <div className="description">
+  <div className="description"  >
     <img
       src={avatar ?? defaultImage}
       alt="User avatar"
@@ -51,3 +51,4 @@ Profile.propTypes = {
   views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired
 }
+

@@ -1,0 +1,25 @@
+.list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.item {
+  width: 80px;
+  height: 80px;
+}
+
+.title {
+  text-align: center;
+}
+
+.section {
+  width: 500px;
+  margin: 0 auto;
+}
+.span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
