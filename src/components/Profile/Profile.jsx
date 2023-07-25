@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './Profile.module.css'
 
 const defaultImage = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png";
 
@@ -11,30 +12,30 @@ export const Profile = ({
   views,
   likes }) => {
   return (
-<div className="profile">
-  <div className="description"  >
+<div className={css.thumb}>
+  <div className={css.description}  >
     <img
       src={avatar ?? defaultImage}
       alt="User avatar"
-      className="avatar"
+      className={css.img}
     />
-    <p className="name">{username}</p>
-    <p className="tag">{tag}</p>
-    <p className="location">{location}</p>
+    <p className={css.text}>{username}</p>
+    <p className={css.text}>@{tag}</p>
+    <p className={css.text}>{location}</p>
   </div>
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{followers}</span>
+  <ul className={css.list}>
+    <li className={css.item}>
+      <span className={css.span}>Followers</span>
+      <span className={css.span}>{followers}</span>
     </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
+    <li className={css.item}>
+      <span className={css.span}>Views</span>
+      <span className={css.span}>{views}</span>
     </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
+    <li className={css.item}>
+      <span className={css.span}>Likes</span>
+      <span className={css.span}>{likes}</span>
     </li>
   </ul>
 </div>

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css'
+import css from './Statistics.module.css';
+import getRandomHexColor from '../../js/colorRanomizer';
 
 export const Statistics = ({ title, stats }) => {
     return (
         <section className={css.section}>
-                       {title.length > 0 && (<h2 className={css.title}>{title}</h2>)}
+            {(title && title.length > 0) && (<h2 className={css.title}>{title}</h2>)}
 
             <ul className={css.list}>
                 {stats.map(stat => {
@@ -32,6 +33,3 @@ Statistics.propTypes = {
         }))
 }
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
-}
